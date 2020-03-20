@@ -1,0 +1,94 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// *** Common
+$html-font-size: 16px;
+$base-url: "../images" !default;
+$fonts: "../fonts/";
+
+// *** Grid
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1600px
+) !default;
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1600px
+) !default;
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+
+// *** Spacing
+$gap: 15px;
+
+// *** Typography
+// **** Font Stack
+$font-primary: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$font-headings: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$font-second: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco", monospace !default;
+
+// **** Font sizing and styling
+$base-font-size: 16px;
+
+$font-size-jumbo: 64px;
+$font-size-xxl: 48px;
+$font-size-xl: 48px;
+$font-size-l: 42px;
+$font-size-m: 36px;
+$font-size-s: 24px;
+$font-size-xs: 14px;
+
+
+$text-font-size: calc-rem($base-font-size);
+$text-line-height: 1.5;
+$text-font-weight: 400;
+$text-baseline: 10px;
+
+$heading-line-height: 1.5;
+$heading-font-weight: 600;
+$heading-baseline: 20px;
+
+// **** Font Colors
+$text-color: #000;
+$heading-color: #000;
+$cta-color: blue;
+
+$accept-color: green;
+$warning-color: yellow;
+$error-color: red;
+$loud-color: pink;
+$quiet-color: grey;
+$hr-color: #000;
+$marker-color: yellow;
+
+// *** a tag default variables
+$a-font: normal calc-rem($base-font-size) $font-primary;
+$a-color: #00f;
+$a-hover-color: darken($a-color,60);
+$a-mb: $text-baseline;
+
+// *** Content
+// **** Colors
+$bg-color-primary: #fff;
+$bg-color-second: #ededed;
+$bg-color-loud: pink;
+$bg-color-quiet: grey;
+
+$border-color: #ededed;
+$border-color-focus: gold;
+$border-color-loud: pink;
+$border-color-quit: grey;
+
+$color-primary: blue;
+$color-secondary: red;
+$color-initial: gold;
