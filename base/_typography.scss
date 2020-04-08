@@ -14,24 +14,24 @@
  *
  */
 
- html {
+html {
   font-size: $html-font-size;
- }
+}
 
- body {
+body {
   color: $text-color;
+  font: normal calc-rem($base-font-size) $font-primary;
   line-height: $text-line-height;
   font-weight: $text-font-weight;
-  font: normal calc-rem($base-font-size) $font-primary;
-	-webkit-font-smoothing: antialiased;
-	-moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
 }
 
 /*** Paragraphs */
 p {
-	font: normal calc-rem($base-font-size) $font-primary;
-	margin-top: 0;
-	margin-bottom: $text-baseline;
+  font: normal calc-rem($base-font-size) $font-primary;
+  margin-top: 0;
+  margin-bottom: $text-baseline;
 }
 
 span {
@@ -52,12 +52,12 @@ select {
 /*** urls */
 a {
   font: $a-font;
-	margin-top: 0;
+  margin-top: 0;
   margin-bottom: $a-mb;
   color: $a-color;
   transition: color 200ms ease;
 
-    @include on-event {
+  @include on-event {
     color: $a-hover-color;
     text-decoration: underline;
   }
@@ -70,37 +70,38 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0;
-	font-family: $font-headings;
-	font-weight: $heading-font-weight;
-	line-height: $heading-line-height;
-	text-rendering: optimizelegibility; // Fix the character spacing for headings
-	margin-bottom: $heading-baseline;
+  margin: 0;
+  font-family: $font-headings;
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
+  text-rendering: optimizelegibility; // Fix the character spacing for headings
+  margin-bottom: $heading-baseline;
 }
 
 // Use the helper classes to emulate styles for another element
 h1,
 .h1,
 .alpha {
-	font-size: calc-rem($font-size-jumbo);
+  font-size: calc-rem($font-size-jumbo);
+  line-height: 1;
 }
 
 h2,
 .h2,
 .beta {
-	font-size: calc-rem($font-size-xxl);
+  font-size: calc-rem($font-size-xxl);
 }
 
 h3,
 .h3,
 .gamma {
-	font-size: calc-rem($font-size-xl);
+  font-size: calc-rem($font-size-xl);
 }
 
 h4,
 .h4,
 .delta {
-	font-size: calc-rem($font-size-l);
+  font-size: calc-rem($font-size-l);
 }
 
 h5,
@@ -109,7 +110,7 @@ h5,
 h6,
 .h6,
 .zeta {
-	font-size: calc-rem($font-size-m);
+  font-size: calc-rem($font-size-m);
 }
 
 // Only give these headings a margin-top if they are after other elements
@@ -125,11 +126,11 @@ h6,
 * + h4,
 * + .h4,
 * + .delta {
-	margin-top: $heading-baseline;
+  margin-top: $heading-baseline;
 }
 
 small {
-	font-size: calc-rem($font-size-xs);
+  font-size: calc-rem($font-size-xs);
 }
 
 /**
@@ -139,90 +140,95 @@ small {
 // Emphasis
 strong,
 b {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 em,
 i {
-	font-style: italic;
+  font-style: italic;
 }
 
 // Abbreviations and acronyms
 abbr[title] {
-	border-bottom: 1px dotted #ddd;
-	cursor: help;
+  border-bottom: 1px dotted #ddd;
+  cursor: help;
 }
 
 /**
  * Blockquotes
  */
 blockquote {
-	padding-left: 10px;
+  padding-left: 10px;
 
-	p {
-		margin-bottom: 0;
-		font-weight: 300;
-	}
+  p {
+    margin-bottom: 0;
+    font-weight: 300;
+  }
 
-	small {
-		display: block;
-		color: lighten(#000, 70%);
+  small {
+    display: block;
+    color: lighten(#000, 70%);
 
-		&::before {
-			content: '\2014 \00A0';
-		}
-	}
+    &::before {
+      content: "\2014 \00A0";
+    }
+  }
 }
 
 // Quotes
 q,
 blockquote {
-	&::before,
-	&::after {
-		content: "";
-	}
+  &::before,
+  &::after {
+    content: "";
+  }
 }
 
 cite {
-	font-style: normal;
+  font-style: normal;
 }
 
 // Addresses styling not present in S5, Chrome
 dfn {
-	font-style: italic;
+  font-style: italic;
 }
 
 // Addresses styling not present in IE6/7/8/9
 mark {
-	background: $marker-color;
-	padding: 2px 4px;
-	border-radius: 3px;
+  background: $marker-color;
+  padding: 2px 4px;
+  border-radius: 3px;
 }
 
 // Prevents sub and sup affecting line-height in all browsers
 // gist.github.com/413930
 sub,
 sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
 
 // Horizontal rules
 hr {
-	margin: ($text-baseline) 0;
-	border: 0;
-	height: 1px;
-	background-color: $hr-color;
+  margin: ($text-baseline) 0;
+  border: 0;
+  height: 1px;
+  background-color: $hr-color;
 }
 
 // https://justmarkup.com/log/2015/07/dealing-with-long-words-in-css/
 .hyphenate {
-	overflow-wrap: break-word;
-	word-wrap: break-word;
-	hyphens: auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }

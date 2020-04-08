@@ -9,21 +9,18 @@ $fonts: "../fonts/";
 
 // *** Grid
 $grid-breakpoints: (
-        xs: 0,
-        sm: 576px,
-        md: 768px,
-        lg: 992px,
-        xl: 1200px,
-        xxl: 1600px
-) !default;
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px) !default;
 
-$container-max-widths: (
-        sm: 540px,
-        md: 720px,
-        lg: 960px,
-        xl: 1140px,
-        xxl: 1600px
-) !default;
+$container-max-widths: (sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1600px) !default;
 
 $grid-columns: 12 !default;
 $grid-gutter-width: 30px !default;
@@ -33,15 +30,25 @@ $gap: 15px;
 
 // *** Typography
 // **** Font Stack
-$font-primary: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
-$font-headings: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
-$font-second: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco", monospace !default;
+$font-primary: "FuturaPT",
+"Helvetica Neue Light",
+"Helvetica Neue",
+"Helvetica",
+"Arial",
+sans-serif !default;
+$font-headings: "Transat",
+"Helvetica Neue Light",
+"Helvetica Neue",
+"Helvetica",
+"Arial",
+sans-serif !default;
+// $font-second: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco", monospace !default;
 
 // **** Font sizing and styling
 $base-font-size: 16px;
 
-$font-size-jumbo: 64px;
-$font-size-xxl: 48px;
+$font-size-jumbo: 80px;
+$font-size-xxl: 64px;
 $font-size-xl: 48px;
 $font-size-l: 42px;
 $font-size-m: 36px;
@@ -54,15 +61,17 @@ $text-line-height: 1.5;
 $text-font-weight: 400;
 $text-baseline: 10px;
 
-$heading-line-height: 1.5;
-$heading-font-weight: 600;
+$heading-line-height: 1.125;
+$heading-font-weight: 700;
 $heading-baseline: 20px;
 
 // **** Font Colors
-$text-color: #000;
-$heading-color: #000;
-$cta-color: blue;
+$text-color: #12464f;
+$text-color-reverse: #fff;
+$heading-color: #12464f;
+$heading-color-reverse: #fff;
 
+$cta-color: #67203E;
 $accept-color: green;
 $warning-color: yellow;
 $error-color: red;
@@ -74,13 +83,15 @@ $marker-color: yellow;
 // *** a tag default variables
 $a-font: normal calc-rem($base-font-size) $font-primary;
 $a-color: #00f;
-$a-hover-color: darken($a-color,60);
+$a-hover-color: darken($a-color, 60);
 $a-mb: $text-baseline;
 
 // *** Content
 // **** Colors
 $bg-color-primary: #fff;
-$bg-color-second: #ededed;
+$bg-color-second: #12464f;
+$bg-color-alternative: #0c868c;
+
 $bg-color-loud: pink;
 $bg-color-quiet: grey;
 

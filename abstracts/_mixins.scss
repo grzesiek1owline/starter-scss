@@ -8,7 +8,6 @@
 /// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
 @mixin on-event($self: false) {
   @if $self {
-
     &,
     &:hover,
     &:active,
@@ -18,7 +17,6 @@
   }
 
   @else {
-
     &:hover,
     &:active,
     &:focus {
@@ -51,7 +49,6 @@
 
 // clearfix
 @mixin clearfix {
-
   &::before,
   &::after {
     content: " ";
@@ -213,15 +210,7 @@
 // hex  bg opacity
 @mixin hex-bg($color, $opacity: 0.3) {
   background: $color;
-  /* The Fallback */
   background: rgba($color, $opacity);
-}
-
-// hex  border opacity
-@mixin hex-bor($color, $opacity: 0.3) {
-  border-color: $color;
-  /* The Fallback */
-  border-color: rgba($color, $opacity);
 }
 
 // rwd mixin
@@ -242,7 +231,6 @@
   -webkit-border-radius: $radius;
   border-radius: $radius;
   background-clip: padding-box;
-  /* stops bg color from leaking outside the border: */
 }
 
 // font options
@@ -279,8 +267,8 @@
 
   @if $index {
     @return str-slice($string, 1, $index - 1)+$replace+str-replace(str-slice($string, $index + str-length($search)),
-      $search,
-      $replace);
+    $search,
+    $replace);
   }
 
   @return $string;
