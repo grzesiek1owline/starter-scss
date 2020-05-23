@@ -9,12 +9,10 @@
 
 /* 2. Vendors */
 
-@import
-  "vendors/bootstrap4/grid";
-
 /* 3. Base stuff */
 @import
   "base/base",
+  "base/grid",
   "base/fonts",
   "base/typography",
   "base/helpers";

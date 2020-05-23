@@ -21,16 +21,16 @@ $font-size-s: 14px;
 $font-size-xs: 13px;
 
 
-$text-font-size: calc-rem($base-font-size);
+$text-font-size: $base-font-size;
 $text-line-height: 2.2;
 $text-font-weight: 400;
-$text-baseline: calc-rem(30px);
+$text-baseline: 30px;
 
 $heading-line-height: normal;
 $heading-font-weight: 700;
 $heading-baseline: 1.5em;
 
-$a-font: normal calc-rem($base-font-size) $font-primary;
+$a-font: $font-primary;
 $a-mb: $text-baseline;
 
 // NOTE: Color variables
@@ -83,13 +83,13 @@ $extra-large-device: 1440px;
 $full-size-device: 1600px;
 
 //Gutters
-$containerGutter: 60px;
-$containerGutterMedium: 30px;
-$containerGutterSmall: 20px;
+$containerGutter: 30px;
+$containerGutterMedium: 20px;
+$containerGutterSmall: 15px;
 $containerGutterExtraSmall: 15px;
 
 /// Container"s maximum width
-$max-width: 1420px !default;
+$max-width: 1210px !default;
 
 // Bootstrap editing
 $grid-breakpoints: (

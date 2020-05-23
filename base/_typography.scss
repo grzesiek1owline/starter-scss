@@ -14,12 +14,12 @@
  *
  */
 
-html {
+ html {
   font-size: 100%;
 }
 
 body {
-  @include css-lock($min-size: calc-irem($font-size-title*0.8), $max-size: calc-irem($base-font-size), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
+  @include css-lock($min-size: calc-irem($base-font-size*0.8), $max-size: calc-irem($base-font-size), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
 
   color: $text-color;
   font-family: $font-primary;
@@ -33,7 +33,7 @@ body {
 p {
   font: normal inherit $font-primary;
   margin-top: 0;
-  margin-bottom: $text-baseline;
+  margin-bottom: calc-rem($text-baseline);
 }
 
 span {
@@ -53,9 +53,10 @@ select {
 
 /*** urls */
 a {
-  font: $a-font;
+  font-family: $a-font;
   margin-top: 0;
-  margin-bottom: $a-mb;
+  font-size: inherit;
+  margin-bottom: calc-rem($a-mb);
   color: $a-color;
   transition: color 200ms ease;
 
@@ -221,7 +222,7 @@ sub {
 
 // Horizontal rules
 hr {
-  margin: ($text-baseline) 0;
+  margin: calc-rem($text-baseline) 0;
   border: 0;
   height: 1px;
   background-color: $hr-color;
