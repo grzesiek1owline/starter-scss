@@ -2,12 +2,96 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-// *** Common
+// NOTE: Typography Variables
 $html-font-size: 16px;
+// **** Font Stack
+$font-primary: 'Montserrat', sans-serif !default;
+$font-headings: 'Montserrat', sans-serif !default;
+// $font-second: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco", monospace !default;
+
+// **** Font sizing and styling
+$base-font-size: 13px;
+$font-size-jumbo: 37px;
+$font-size-title: 37px;
+$font-size-xxl: 28px;
+$font-size-xl: 20px;
+$font-size-l: 18px;
+$font-size-m: 15px;
+$font-size-s: 14px;
+$font-size-xs: 13px;
+
+
+$text-font-size: calc-rem($base-font-size);
+$text-line-height: 2.2;
+$text-font-weight: 400;
+$text-baseline: calc-rem(30px);
+
+$heading-line-height: normal;
+$heading-font-weight: 700;
+$heading-baseline: 1.5em;
+
+$a-font: normal calc-rem($base-font-size) $font-primary;
+$a-mb: $text-baseline;
+
+// NOTE: Color variables
+
+$color-primary: #35174d;
+$color-secondary: #ff7582;
+$color-initial: #fff;
+
+$hr-color: #000;
+$bg-color-primary: #fff;
+$bg-color-second: #12464f;
+$bg-color-alternative: #0c868c;
+
+$bg-color-loud: pink;
+$bg-color-quiet: grey;
+
+$border-color: #ededed;
+$border-color-focus: gold;
+$border-color-loud: pink;
+$border-color-quit: grey;
+
+
+// **** Font Colors
+$text-color: #707070;
+$text-color-second: #693388;
+$text-color-alternative: #fff;
+
+$heading-color: #693388;
+$heading-color-alternative: #fff;
+
+$cta-color: #ff7582;
+$marker-color: yellow;
+
+$a-color: #707070;
+$a-hover-color: darken($a-color, 60);
+
+
+// NOTE: Sources
 $base-url: "../images" !default;
 $fonts: "../fonts/";
 
-// *** Grid
+// NOTE: Grid Variables
+
+// Sizes
+$extra-small-device: 576px;
+$small-device: 768px;
+$medium-device: 992px;
+$large-device: 1200px;
+$extra-large-device: 1440px;
+$full-size-device: 1600px;
+
+//Gutters
+$containerGutter: 60px;
+$containerGutterMedium: 30px;
+$containerGutterSmall: 20px;
+$containerGutterExtraSmall: 15px;
+
+/// Container"s maximum width
+$max-width: 1420px !default;
+
+// Bootstrap editing
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
@@ -24,82 +108,4 @@ $container-max-widths: (sm: 540px,
 
 $grid-columns: 12 !default;
 $grid-gutter-width: 30px !default;
-
-// *** Spacing
 $gap: 15px;
-
-// *** Typography
-// **** Font Stack
-$font-primary: "FuturaPT",
-"Helvetica Neue Light",
-"Helvetica Neue",
-"Helvetica",
-"Arial",
-sans-serif !default;
-$font-headings: "Transat",
-"Helvetica Neue Light",
-"Helvetica Neue",
-"Helvetica",
-"Arial",
-sans-serif !default;
-// $font-second: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco", monospace !default;
-
-// **** Font sizing and styling
-$base-font-size: 16px;
-
-$font-size-jumbo: 80px;
-$font-size-xxl: 64px;
-$font-size-xl: 48px;
-$font-size-l: 42px;
-$font-size-m: 36px;
-$font-size-s: 24px;
-$font-size-xs: 14px;
-
-
-$text-font-size: calc-rem($base-font-size);
-$text-line-height: 1.5;
-$text-font-weight: 400;
-$text-baseline: 10px;
-
-$heading-line-height: 1.125;
-$heading-font-weight: 700;
-$heading-baseline: 20px;
-
-// **** Font Colors
-$text-color: #12464f;
-$text-color-reverse: #fff;
-$heading-color: #12464f;
-$heading-color-reverse: #fff;
-
-$cta-color: #67203E;
-$accept-color: green;
-$warning-color: yellow;
-$error-color: red;
-$loud-color: pink;
-$quiet-color: grey;
-$hr-color: #000;
-$marker-color: yellow;
-
-// *** a tag default variables
-$a-font: normal calc-rem($base-font-size) $font-primary;
-$a-color: #00f;
-$a-hover-color: darken($a-color, 60);
-$a-mb: $text-baseline;
-
-// *** Content
-// **** Colors
-$bg-color-primary: #fff;
-$bg-color-second: #12464f;
-$bg-color-alternative: #0c868c;
-
-$bg-color-loud: pink;
-$bg-color-quiet: grey;
-
-$border-color: #ededed;
-$border-color-focus: gold;
-$border-color-loud: pink;
-$border-color-quit: grey;
-
-$color-primary: blue;
-$color-secondary: red;
-$color-initial: gold;

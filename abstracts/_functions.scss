@@ -33,3 +33,12 @@
 @function calc-rem($target, $context: $base-font-size) {
   @return ($target / $context) * 1rem;
 }
+
+// Returns font size in REM but not add unit
+@function calc-irem($target, $context: $base-font-size) {
+  @return ($target / $context);
+}
+
+@function calc-em($target, $context: $base-font-size) {
+  @return ($target / $context) * 1em;
+}

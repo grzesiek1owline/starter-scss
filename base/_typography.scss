@@ -15,12 +15,14 @@
  */
 
 html {
-  font-size: $html-font-size;
+  font-size: 100%;
 }
 
 body {
+  @include css-lock($min-size: calc-irem($font-size-title*0.8), $max-size: calc-irem($base-font-size), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
+
   color: $text-color;
-  font: normal calc-rem($base-font-size) $font-primary;
+  font-family: $font-primary;
   line-height: $text-line-height;
   font-weight: $text-font-weight;
   -webkit-font-smoothing: antialiased;
@@ -29,7 +31,7 @@ body {
 
 /*** Paragraphs */
 p {
-  font: normal calc-rem($base-font-size) $font-primary;
+  font: normal inherit $font-primary;
   margin-top: 0;
   margin-bottom: $text-baseline;
 }
@@ -82,26 +84,25 @@ h6 {
 h1,
 .h1,
 .alpha {
-  font-size: calc-rem($font-size-jumbo);
-  line-height: 1;
+  @include css-lock($min-size: calc-irem($font-size-title/3), $max-size: calc-irem($font-size-title), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
 }
 
 h2,
 .h2,
 .beta {
-  font-size: calc-rem($font-size-xxl);
+  @include css-lock($min-size: calc-irem($font-size-xxl/3), $max-size: calc-irem($font-size-xxl), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
 }
 
 h3,
 .h3,
 .gamma {
-  font-size: calc-rem($font-size-xl);
+  @include css-lock($min-size: calc-irem($font-size-xl/1.5), $max-size: calc-irem($font-size-xl), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
 }
 
 h4,
 .h4,
 .delta {
-  font-size: calc-rem($font-size-l);
+  @include css-lock($min-size: calc-irem($font-size-l/1.2), $max-size: calc-irem($font-size-l), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
 }
 
 h5,
@@ -224,11 +225,4 @@ hr {
   border: 0;
   height: 1px;
   background-color: $hr-color;
-}
-
-// https://justmarkup.com/log/2015/07/dealing-with-long-words-in-css/
-.hyphenate {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  hyphens: auto;
 }

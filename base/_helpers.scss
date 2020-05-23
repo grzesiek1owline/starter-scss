@@ -69,11 +69,11 @@
   font-weight: 300;
 }
 
-.h-medium {
+.h-regular {
   font-weight: 400;
 }
 
-.h-regular {
+.h-medium {
   font-weight: 500;
 }
 
@@ -87,4 +87,10 @@
 
 .h-parent-size {
   font-size: inherit;
+}
+
+.h-hyphenate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
