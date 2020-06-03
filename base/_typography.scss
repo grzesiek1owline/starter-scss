@@ -19,8 +19,7 @@
 }
 
 body {
-  @include css-lock($min-size: calc-irem($base-font-size*0.8), $max-size: calc-irem($base-font-size), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
-
+  font-size: calc-rem($base-font-size);
   color: $text-color;
   font-family: $font-primary;
   line-height: $text-line-height;
@@ -83,34 +82,28 @@ h6 {
 
 // Use the helper classes to emulate styles for another element
 h1,
-.h1,
 .alpha {
   @include css-lock($min-size: calc-irem($font-size-title/3), $max-size: calc-irem($font-size-title), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
 }
 
 h2,
-.h2,
 .beta {
   @include css-lock($min-size: calc-irem($font-size-xxl/3), $max-size: calc-irem($font-size-xxl), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
 }
 
 h3,
-.h3,
 .gamma {
   @include css-lock($min-size: calc-irem($font-size-xl/1.5), $max-size: calc-irem($font-size-xl), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
 }
 
 h4,
-.h4,
 .delta {
   @include css-lock($min-size: calc-irem($font-size-l/1.2), $max-size: calc-irem($font-size-l), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
 }
 
 h5,
-.h5,
 .epsilon,
 h6,
-.h6,
 .zeta {
   font-size: calc-rem($font-size-m);
 }

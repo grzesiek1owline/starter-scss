@@ -14,17 +14,48 @@ input[type="week"],
 input[type="datetime"],
 input[type="datetime-local"],
 input:not([type]),
-textarea,
-select {
+.input {
   appearance: none; // Removes awkward default styles on some inputs for iOS
   background-color: transparent;
-  border: 0.1rem solid $border-color;
-  border-radius: 0.4rem;
+  border: 1px solid #f3effe;
   box-shadow: none;
   box-sizing: inherit;
-  height: 3.8rem;
-  padding: 0.6rem 1rem;
+  height: auto;
+  padding: 0.5rem 1rem;
   width: 100%;
+  border-radius: calc-rem(40px);
+
+  &:focus {
+    border-color: $border-color-focus;
+    outline: 0;
+  }
+}
+
+textarea {
+  @extend .input;
+
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+
+  &:focus {
+    border-color: $border-color-focus;
+    outline: 0;
+  }
+}
+
+label {
+  font-weight: bold;
+  color: $color-primary;
+}
+
+select {
+  @extend .input;
+
+  appearance: none !important;
+  background-image: url("../images/arrow2.png");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  padding-right: 25px;
 
   &:focus {
     border-color: $border-color-focus;

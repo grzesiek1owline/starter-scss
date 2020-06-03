@@ -21,3 +21,11 @@
     padding-right: calc-rem($containerGutter);
   }
 }
+
+.row {
+  @extend %row;
+}
+
+.column {
+  flex: 1;
+}
