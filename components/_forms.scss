@@ -51,12 +51,6 @@ label {
 select {
   @extend .input;
 
-  appearance: none !important;
-  background-image: url("../images/arrow2.png");
-  background-repeat: no-repeat;
-  background-position: right 15px center;
-  padding-right: 25px;
-
   &:focus {
     border-color: $border-color-focus;
     outline: 0;
