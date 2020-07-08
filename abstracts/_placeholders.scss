@@ -1,5 +1,5 @@
-%row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
+@import
+"placeholders/grid.scss",
+"placeholders/images.scss",
+"placeholders/_sizing.scss",
+"placeholders/text.scss";

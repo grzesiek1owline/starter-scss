@@ -1,0 +1,29 @@
+%container-spacing {
+  padding-left: calc-rem($containerGutterSmall); /* 3 */
+  padding-right: calc-rem($containerGutterSmall);
+
+  @include rwdm($medium-device) {
+    padding-left: calc-rem($containerGutterSmall); /* 3 */
+    padding-right: calc-rem($containerGutterSmall);
+  }
+
+  @include rwdm($large-device) {
+    padding-left: calc-rem($containerGutterMedium); /* 3 */
+    padding-right: calc-rem($containerGutterMedium);
+  }
+
+  @include rwdm($full-size-device) {
+    padding-left: calc-rem($containerGutter); /* 3 */
+    padding-right: calc-rem($containerGutter);
+  }
+}
+
+%gutters {
+  margin-left: -$gutter;
+  margin-right: -$gutter;
+
+  & > * {
+    padding: 0 $gutter;
+    margin-bottom: $gutter;
+  }
+}

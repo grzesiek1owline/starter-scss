@@ -14,13 +14,12 @@
  *
  */
 
- html {
+html {
   font-size: 100%;
 }
 
 body {
-  @include css-lock($min-size: calc-irem($base-font-size*0.8), $max-size: calc-irem($base-font-size), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
-
+  font-size: calc-rem($base-font-size);
   color: $text-color;
   font-family: $font-primary;
   line-height: $text-line-height;
@@ -171,52 +170,8 @@ blockquote {
   }
 }
 
-// Quotes
-q,
-blockquote {
-  &::before,
-  &::after {
-    content: "";
-  }
-}
-
-cite {
-  font-style: normal;
-}
-
-// Addresses styling not present in S5, Chrome
-dfn {
-  font-style: italic;
-}
-
-// Addresses styling not present in IE6/7/8/9
-mark {
-  background: $marker-color;
-  padding: 2px 4px;
-  border-radius: 3px;
-}
-
-// Prevents sub and sup affecting line-height in all browsers
-// gist.github.com/413930
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
 // Horizontal rules
 hr {
-  // margin: calc-rem($text-baseline) 0;
   border: 0;
   height: 1px;
   background-color: $hr-color;

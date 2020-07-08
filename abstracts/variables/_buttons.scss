@@ -1,0 +1,42 @@
+//-- Sizing
+$btn-font-size: 1rem;
+$btn-font-weight: 500;
+$btn-padding-y: 1em;
+$btn-padding-x: 2em;
+$btn-line-height: normal;
+$btn-border-radius: 0;
+$btn-border-width: 1px solid;
+
+$btn-padding-y-lg: 1em;
+$btn-padding-x-lg: 2em;
+$btn-font-size-lg: 2rem;
+$btn-font-weight-lg: 500;
+$btn-line-height-lg: normal;
+
+$btn-padding-y-sm: 1em;
+$btn-padding-x-sm: 2em;
+$btn-font-size-sm: 0.8rem;
+$btn-font-weight-sm: 500;
+$btn-line-height-sm: normal;
+
+//--Colors
+$btn-color-bg: red;
+$btn-color-text: #fff;
+$btn-color-border: blue;
+
+//--States and decors
+$btn-disabled-opacity: 0.75;
+$btn-active-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
+$btn-focus-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
+$btn-disabled-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
+
+//-- Transitions
+$btn-transition: opacity 200ms ease;
+
+//-- Groups
+
+$btn-group-horizontal-space: 1rem;
+$btn-group-vertical-space: 1rem;
+
+//-- Config
+$enable-rounded: true;

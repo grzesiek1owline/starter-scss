@@ -1,0 +1,19 @@
+//-- Font family
+
+$font-primary: 'Montserrat', sans-serif !default;
+$font-headings: 'Montserrat', sans-serif !default;
+$font-second: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco", monospace !default;
+
+//-- Texts
+$text-line-height: 1.5;
+$text-font-weight: 400;
+$text-baseline: 1.5em;
+
+//-- Headings
+$heading-line-height: normal;
+$heading-font-weight: 700;
+$heading-baseline: 1.5em;
+
+//-- Hrefs
+$a-font: $font-primary;
+$a-mb: $text-baseline;

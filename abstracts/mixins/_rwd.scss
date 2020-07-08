@@ -1,0 +1,11 @@
+@mixin rwd($size) {
+  @media all and (max-width: #{$size}) {
+    @content;
+  }
+}
+
+@mixin rwdm($size) {
+  @media all and (min-width: #{$size}) {
+    @content;
+  }
+}

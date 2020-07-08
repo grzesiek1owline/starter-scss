@@ -1,33 +1,37 @@
 // Form
 
-input[type="email"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="url"],
-input[type="color"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="datetime"],
-input[type="datetime-local"],
-input:not([type]),
 .input {
   appearance: none; // Removes awkward default styles on some inputs for iOS
-  background-color: transparent;
-  border: 1px solid #f3effe;
+  background-color: $input-color-bg;
+  color: $input-color-text;
+  border: $input-border-width $input-color-border;
   box-shadow: none;
   box-sizing: inherit;
   height: auto;
-  padding: 0.5rem 1rem;
-  width: 100%;
-  border-radius: calc-rem(40px);
+  display: inline-block;
+
+  @include input-size($input-padding-y, $input-padding-x, $input-font-size, $input-font-weight, $input-line-height, $input-border-radius);
 
   &:focus {
-    border-color: $border-color-focus;
+    box-shadow: $input-focus-shadow;
     outline: 0;
+  }
+
+  &--lg {
+    @include input-size($input-padding-y-lg, $input-padding-x-lg, $input-font-size-lg, $input-font-weight-lg, $input-line-height-lg, $input-border-radius);
+  }
+
+  &--sm {
+    @include input-size($input-padding-y-sm, $input-padding-x-sm, $input-font-size-sm, $input-font-weight-sm, $input-line-height-sm, $input-border-radius);
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+  }
+
+  @include placeholder {
+    color: $input-color-placeholder;
   }
 }
 
@@ -38,7 +42,7 @@ textarea {
   border-radius: 20px;
 
   &:focus {
-    border-color: $border-color-focus;
+    box-shadow: $input-focus-shadow;
     outline: 0;
   }
 }
@@ -52,7 +56,7 @@ select {
   @extend .input;
 
   &:focus {
-    border-color: $border-color-focus;
+    box-shadow: $input-focus-shadow;
     outline: 0;
   }
 }

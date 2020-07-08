@@ -1,0 +1,28 @@
+%icon {
+  display: block;
+  height: 100%;
+  width: auto;
+}
+
+%has-img-bg {
+  position: relative;
+
+  & img,
+  & picture {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+  }
+}
+
+%img-bg {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  min-width: 100%;
+  object-fit: cover;
+}
