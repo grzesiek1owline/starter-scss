@@ -1,0 +1,80 @@
+// -- Grid
+// Container"s maximum width
+$max-width: 1210px !default;
+
+// -- Resposive sizes
+$extra-small-device: 576px;
+$small-device: 768px;
+$medium-device: 992px;
+$large-device: 1200px;
+$extra-large-device: 1440px;
+$full-size-device: 1600px;
+
+//Gutters
+$gutter: 16px;
+$containerGutter: 32px;
+$containerGutterMedium: 24px;
+$containerGutterSmall: 16px;
+$containerGutterExtraSmall: 10px;
+
+// -- Buttons
+$btn-font-size: 1rem;
+$btn-font-weight: 500;
+$btn-padding-y: 1em;
+$btn-padding-x: 2em;
+$btn-line-height: normal;
+$btn-border-radius: 0;
+$btn-border-width: 1px solid;
+
+$btn-padding-y-lg: 1em;
+$btn-padding-x-lg: 2em;
+$btn-font-size-lg: 2rem;
+$btn-font-weight-lg: 500;
+$btn-line-height-lg: normal;
+
+$btn-padding-y-sm: 1em;
+$btn-padding-x-sm: 2em;
+$btn-font-size-sm: 0.8rem;
+$btn-font-weight-sm: 500;
+$btn-line-height-sm: normal;
+
+// -- Inputs
+
+$input-font-size: 1rem;
+$input-font-weight: 500;
+$input-padding-y: 1em;
+$input-padding-x: 2em;
+$input-line-height: normal;
+$input-border-radius: 0;
+$input-border-width: 1px solid;
+
+$input-padding-y-lg: 1em;
+$input-padding-x-lg: 2em;
+$input-font-size-lg: 2rem;
+$input-font-weight-lg: 500;
+$input-line-height-lg: normal;
+
+$input-padding-y-sm: 1em;
+$input-padding-x-sm: 2em;
+$input-font-size-sm: 0.8rem;
+$input-font-weight-sm: 500;
+$input-line-height-sm: normal;
+
+// Bootstrap variables editing
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px) !default;
+
+$container-max-widths: (sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1600px) !default;
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+$gap: 15px;

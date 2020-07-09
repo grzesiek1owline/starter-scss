@@ -1,17 +1,6 @@
 @import
-"variables/bootstrap.scss",
-"variables/buttons.scss",
 "variables/colors.scss",
-"variables/font-sizes.scss",
-"variables/grid.scss",
-"variables/inputs.scss",
-"variables/links.scss",
+"variables/helpers.scss",
 "variables/paths.scss",
+"variables/sizing.scss",
 "variables/typography.scss";
-
-// TODO: Podziel zmienne według typu, a nie komponentu.
-// - kolory
-// - rozmiary i odstępy
-// - typografia
-// - paths
-// -- helpers

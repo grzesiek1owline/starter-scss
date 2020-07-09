@@ -1,4 +1,15 @@
-//-- Font family
+$base-font-size: 16px;
+
+$font-size-primary: 21px;
+$font-size-jumbo: 37px;
+$font-size-title: 37px;
+$font-size-xxl: 28px;
+$font-size-xl: 20px;
+$font-size-l: 18px;
+$font-size-m: 15px;
+$font-size-s: 14px;
+$font-size-xs: 13px;
+$font-size-xxs: 13px;
 
 $font-primary: 'Montserrat', sans-serif !default;
 $font-headings: 'Montserrat', sans-serif !default;
@@ -17,3 +28,7 @@ $heading-baseline: 1.5em;
 //-- Hrefs
 $a-font: $font-primary;
 $a-mb: $text-baseline;
+
+$link-line-height: normal;
+$link-font-weight: 500;
+$link-hover-decoration: none;
