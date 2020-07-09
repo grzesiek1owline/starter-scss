@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  font-size: calc-rem($base-font-size);
+  font-size: calc-rem($body-font-size);
   color: $text-color;
   font-family: $font-primary;
   line-height: $text-line-height;
@@ -30,7 +30,7 @@ body {
 
 /*** Paragraphs */
 p {
-  font: normal inherit $font-primary;
+  font-family: inherit;
   margin-top: 0;
   margin-bottom: $text-baseline;
 }
