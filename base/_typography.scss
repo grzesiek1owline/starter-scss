@@ -14,32 +14,46 @@
  *
  */
 
-html {
+ html {
+  box-sizing: border-box;
   font-size: 100%;
+  line-height: $html-line-height;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
-  font-size: calc-rem($body-font-size);
-  color: $text-color;
-  font-family: $font-primary;
-  line-height: $text-line-height;
-  font-weight: $text-font-weight;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
+  color: $color-primary;
+  font-family: $body-font-family;
+  font-size: $font-size;
+  text-rendering: optimizeLegibility;
 }
 
-/*** Paragraphs */
+a {
+  color: $link-color;
+  outline: none;
+  text-decoration: none;
+
+  &.active {
+    color: $link-color-dark;
+    text-decoration: underline;
+  }
+
+  @include on-event {
+    color: $link-color-dark;
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: $link-color-light;
+  }
+}
+
 p {
   font-family: inherit;
-  margin-top: 0;
   margin-bottom: $text-baseline;
+  margin: 0 0 $text-baseline;
 }
 
-span {
-  font-size: inherit;
-}
-
-/*** Forms */
 input,
 textarea,
 select {
@@ -50,62 +64,50 @@ select {
   }
 }
 
-/*** urls */
-a {
-  font-family: $a-font;
-  margin-top: 0;
-  font-size: inherit;
-  margin-bottom: $a-mb;
-  color: $a-color;
-  transition: color 200ms ease;
-
-  @include on-event {
-    color: $a-hover-color;
-    text-decoration: underline;
-  }
-}
-
-/*** Headings */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin: 0;
   font-family: $font-headings;
   font-weight: $heading-font-weight;
   line-height: $heading-line-height;
-  text-rendering: optimizelegibility; // Fix the character spacing for headings
-  margin-bottom: $heading-baseline;
+  margin: 0 0 $heading-baseline;
 }
 
-// Use the helper classes to emulate styles for another element
+.jumbo {
+  @include css-lock($min-size: calc-irem($font-size-jumbo * 0.7), $max-size: calc-irem($font-size-jumbo), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
+}
+
 h1,
 .alpha {
-  @include css-lock($min-size: calc-irem($font-size-title/3), $max-size: calc-irem($font-size-title), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
+  @include css-lock($min-size: calc-irem($font-size-alpha * 0.7), $max-size: calc-irem($font-size-alpha), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
 }
 
 h2,
 .beta {
-  @include css-lock($min-size: calc-irem($font-size-xxl/3), $max-size: calc-irem($font-size-xxl), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
+  @include css-lock($min-size: calc-irem($font-size-beta * 0.7), $max-size: calc-irem($font-size-beta), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
 }
 
 h3,
 .gamma {
-  @include css-lock($min-size: calc-irem($font-size-xl/1.5), $max-size: calc-irem($font-size-xl), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
+  @include css-lock($min-size: calc-irem($font-size-gamma * 0.7), $max-size: calc-irem($font-size-gamma), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
 }
 
 h4,
 .delta {
-  @include css-lock($min-size: calc-irem($font-size-l/1.2), $max-size: calc-irem($font-size-l), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
+  @include css-lock($min-size: calc-irem($font-size-delta * 0.7), $max-size: calc-irem($font-size-delta), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
 }
 
 h5,
-.epsilon,
+.epsilon {
+  @include css-lock($min-size: calc-irem($font-size-epsilon * 0.7), $max-size: calc-irem($font-size-epsilon), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
+}
+
 h6,
 .zeta {
-  font-size: calc-rem($font-size-m);
+  @include css-lock($min-size: calc-irem($font-size-zeta * 0.7), $max-size: calc-irem($font-size-zeta), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
 }
 
 // Only give these headings a margin-top if they are after other elements
@@ -124,15 +126,11 @@ h6,
   margin-top: $heading-baseline;
 }
 
+// Semantic text elements
 small {
-  font-size: calc-rem($font-size-xs);
+  font-size: calc-rem($font-size-xsmall);
 }
 
-/**
- * Miscellaneous
- */
-
-// Emphasis
 strong,
 b {
   font-weight: bold;
@@ -143,36 +141,82 @@ i {
   font-style: italic;
 }
 
-// Abbreviations and acronyms
+a,
+ins,
+u {
+  text-decoration-skip: ink edges;
+}
+
 abbr[title] {
-  border-bottom: 1px dotted #ddd;
+  border-bottom: $border-width dotted;
   cursor: help;
+  text-decoration: none;
 }
 
-/**
- * Blockquotes
- */
+kbd {
+  border-radius: $border-radius;
+  line-height: 1.25;
+  padding: .1rem .2rem;
+  background: $bg-color;
+  color: $color;
+}
+
+mark {
+  background: $bg-color;
+  color: $color;
+  border-bottom: $unit-o solid darken($highlight-color, 15%);
+  border-radius: $border-radius;
+  padding: $unit-o $unit-h 0;
+}
+
+// Blockquote
 blockquote {
-  padding-left: 10px;
+  border-left: $border-width solid $border-color;
+  margin-left: 0;
+  padding: 1rem;
 
-  p {
+  p:last-child {
     margin-bottom: 0;
-    font-weight: 300;
-  }
-
-  small {
-    display: block;
-    color: lighten(#000, 70%);
-
-    &::before {
-      content: "\2014 \00A0";
-    }
   }
 }
 
-// Horizontal rules
-hr {
-  border: 0;
-  height: 1px;
-  background-color: $hr-color;
+// Lists
+ul,
+ol {
+  margin: $unit-4 0 $unit-4 $unit-4;
+  padding: 0;
+
+  ul,
+  ol {
+    margin: $unit-4 0 $unit-4 $unit-4;
+  }
+
+  li {
+    margin-top: $unit-2;
+  }
+}
+
+ul {
+  list-style: disc inside;
+
+  ul {
+    list-style-type: circle;
+  }
+}
+
+ol {
+  list-style: decimal inside;
+
+  ol {
+    list-style-type: lower-alpha;
+  }
+}
+
+dl {
+  dt {
+    font-weight: bold;
+  }
+  dd {
+    margin: $unit-2 0 $unit-4 0;
+  }
 }
