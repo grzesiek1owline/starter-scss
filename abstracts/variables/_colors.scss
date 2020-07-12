@@ -7,7 +7,9 @@ $heading-color-second: #fff;
 
 $link-color: red;
 $link-hover-color: green;
-$link-disabled-color: grey;
+
+$disabled-color: grey;
+$disabled-opacity: 0.8;
 
 // -- Elements
 $bg-color-primary: #fff;
@@ -21,15 +23,9 @@ $btn-color-bg: red;
 $btn-color-text: #fff;
 $btn-color-border: blue;
 
-$btn-disabled-opacity: 0.75;
-$btn-active-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
-$btn-focus-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
-$btn-disabled-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
-
 // -- Inputs
 $input-color-bg: red;
 $input-color-text: #fff;
 $input-color-border: blue;
 $input-color-focus: pink;
 $input-color-placeholder: yellow;
-$input-disabled-opacity: 0.75;
