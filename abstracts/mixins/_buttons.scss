@@ -1,9 +1,9 @@
-@mixin button-size($padding-y, $padding-x, $font-size, $btn-font-weight, $line-height, $border-radius) {
+@mixin button-size($padding-y, $padding-x, $font-size, $btn-font-weight, $line-height, $border-radius, $enable-rounded) {
   padding: $padding-y $padding-x;
   font-size: $font-size;
   line-height: $line-height;
   font-weight: $btn-font-weight;
-  // Manually declare to provide an override to the browser default
+  // config in variables/helpers
   @if $enable-rounded {
     border-radius: $border-radius;
   } @else {

@@ -1,7 +1,25 @@
-# Main file
+# Struktura
 
-The main file (usually labelled `main.scss`) should be the only Sass file from the whole code base not to begin with an underscore. This file should not contain anything but `@import` and comments.
+## Vendors
+    Biblioteki podmiotów trzecich.
 
-*Note: when using [Eyeglass](https://github.com/sass-eyeglass/eyeglass) for distribution, it might be a fine idea to name this file `index.scss` rather than `main.scss` in order to stick to [Eyeglass modules specifications](https://github.com/sass-eyeglass/eyeglass#writing-an-eyeglass-module-with-sass-files). See [#21](https://github.com/HugoGiraudel/sass-boilerplate/issues/21) for reference.*
+## Abstracts
+    Tylko funkcje pomocnicze i nie-wyjściowe fragmenty (importy czcionek, miksy wielokrotnego użytku, zmienne globalne, kolory itp.)
 
-Reference: [Sass Guidelines](http://sass-guidelin.es/) > [Architecture](http://sass-guidelin.es/#architecture) > [Main file](http://sass-guidelin.es/#main-file)
+## Base
+    Style globalne są importowane tutaj. 
+    Tutaj jest też grid.
+    Można dodać niestandardowy plik resetowania, aby zastąpić normalizację.
+
+## Layout
+    Importowane są tutaj unikalne kombinacje komponentów i stylów bazowych.
+    Każdy arkusz stylów zawiera wszystkie przesłonięcia stylu komponentu i tylko określone atrybuty układu.
+
+## Components
+    Importowane są tutaj elementy wielokrotnego użytku na poziomie mikro. 
+    Każdy komponent robi jedną i tylko jedną rzecz. 
+    Komponenty są wielokrotnego użytku w całym projekcie. 
+    Komponenty są niezależne.
+
+## Helpers
+    Klasy pomocnicze.

@@ -1,6 +1,6 @@
 //-- Transitions
-$btn-transition: opacity 200ms ease;
-$input-transition: opacity 200ms ease;
+$transition-opacity: opacity 200ms ease;
+$btn-transition: transform 200ms ease;
 
 //-- Groups
 $btn-group-horizontal-space: 1rem;
@@ -11,3 +11,9 @@ $input-group-vertical-space: 1rem;
 //-- Config
 $enable-rounded: true;
 $input-enable-rounded: true;
+
+//-- Utils
+$disabled-color: grey;
+$disabled-opacity: 0.8;
+
+$border-radius: 10px;

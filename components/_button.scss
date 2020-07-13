@@ -7,39 +7,27 @@
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
-  border: $btn-border-width $btn-color-border;
-
-  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-font-weight, $btn-line-height, $btn-border-radius);
+  outline: none;
+  transition: $btn-transition;
+  background-color: $btn-bg-color;
+  color: $btn-text-color;
+  
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-font-weight, $btn-line-height, $btn-border-radius, $enable-rounded);
 
   // Share hover and focus styles
   @include hover-focus {
     text-decoration: none;
   }
 
-  &:focus,
-  &.focus {
-    outline: 0;
-    box-shadow: $btn-focus-shadow;
-  }
-
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
-    opacity: $btn-disabled-opacity;
-    box-shadow: $btn-disabled-shadow;
+    opacity: $disabled-opacity;
   }
 
   // Opinionated: add "hand" cursor to non-disabled .btn elements
   &:not(:disabled):not(.disabled) {
     cursor: pointer;
-  }
-
-  &--lg {
-    @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-font-weight-lg, $btn-line-height-lg, $btn-border-radius);
-  }
-
-  &--sm {
-    @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-font-weight-sm, $btn-line-height-sm, $btn-border-radius);
   }
 
   &--block {
@@ -60,6 +48,7 @@ input[type="button"] {
   font-weight: $link-font-weight;
   color: $link-color;
   background-color: transparent;
+  border: none;
 
   @include hover {
     color: $link-hover-color;
@@ -79,82 +68,5 @@ input[type="button"] {
   &.disabled {
     color: $link-disabled-color;
     pointer-events: none;
-  }
-
-  // No need for an active state here
-}
-
-.hamburger {
-  $root: &;
-
-  display: block;
-  width: 60px;
-  height: 45px;
-  position: relative;
-  transform: rotate(0deg);
-  transition: transform 0.5s ease-in-out;
-  cursor: pointer;
-  border: none;
-  background: none;
-  outline: none;
-
-  @include rwdm($medium-device) {
-    display: none;
-  }
-
-  &:focus,
-  &:hover {
-    background-color: transparent;
-  }
-
-  &.is-open {
-    z-index: 100;
-
-    #{$root}__line {
-      &:nth-child(1) {
-        top: 18px;
-        width: 0%;
-        left: 50%;
-      }
-
-      &:nth-child(2) {
-        transform: rotate(45deg);
-      }
-
-      &:nth-child(3) {
-        transform: rotate(-45deg);
-      }
-
-      &:nth-child(4) {
-        top: 18px;
-        width: 0%;
-        left: 50%;
-      }
-    }
-  }
-
-  &__line {
-    display: block;
-    position: absolute;
-    height: 6px;
-    width: 100%;
-    background: $color-primary;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: 0.25s ease-in-out;
-
-    &:nth-child(1) {
-      top: 0;
-    }
-
-    &:nth-child(2),
-    &:nth-child(3) {
-      top: 18px;
-    }
-
-    &:nth-child(4) {
-      top: 36px;
-    }
   }
 }

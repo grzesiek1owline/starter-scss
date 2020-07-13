@@ -1,6 +1,6 @@
 // -- Text
-$color-primary: #35174d;
-$color-second: #ff7582;
+$text-color: #35174d;
+$text-color-second: #ff7582;
 
 $heading-color: #693388;
 $heading-color-second: #fff;
@@ -8,24 +8,27 @@ $heading-color-second: #fff;
 $link-color: red;
 $link-hover-color: green;
 
-$disabled-color: grey;
-$disabled-opacity: 0.8;
+// -- State 
+$highlight-color: gold;
+$succes-color: green;
+$error-color: red;
+$alert-color: yellow;
 
 // -- Elements
-$bg-color-primary: #fff;
+$bg-color: #fff;
 $bg-color-second: #12464f;
 
 $border-color: #ededed;
 $border-color-focus: gold;
 
 //-- Buttons
-$btn-color-bg: red;
-$btn-color-text: #fff;
-$btn-color-border: blue;
+$btn-bg-color: red;
+$btn-text-color: #fff;
+$btn-border-color: blue;
 
 // -- Inputs
-$input-color-bg: red;
-$input-color-text: #fff;
-$input-color-border: blue;
-$input-color-focus: pink;
-$input-color-placeholder: yellow;
+$input-bg-color: red;
+$input-text-color: #fff;
+$input-border-color: blue;
+$input-focus-color: pink;
+$input-placeholder-color: yellow;
