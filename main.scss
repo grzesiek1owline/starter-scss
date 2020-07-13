@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /* 1. Configuration and helpers */
 @import
   "abstracts/variables",
@@ -7,7 +6,12 @@
   "abstracts/mixins",
   "abstracts/placeholders";
 
+@import
+  "base/reset";
+
 /* 2. Vendors */
+@import
+  "bootstrap4/grid";
 
 /* 3. Base stuff */
 @import
@@ -15,8 +19,6 @@
   "base/grid",
   "base/fonts",
   "base/btn-group",
-  "base/helpers",
-  "base/reset",
   "base/typography";
 
 /* 4. Layout-related sections */
@@ -26,12 +28,12 @@
 
 /* 5. Components */
 @import
+  "components/btn-group",
   "components/button",
   "components/hamburger",
   "components/forms";
 
 /* 6. Helpers / Utilities */
 @import
-  "utilities/text",
-  "utilities/visibility";
+  "utilities/text";
 

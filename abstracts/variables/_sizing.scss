@@ -27,7 +27,7 @@ $btn-line-height: normal;
 $btn-border-radius: 0;
 $btn-border-type: 1px solid;
 
-// ---- Optional 
+// ---- Optional
 $btn-padding-y-lg: 1em;
 $btn-padding-x-lg: 2em;
 $btn-font-size-lg: 2rem;
@@ -39,6 +39,12 @@ $btn-padding-x-sm: 2em;
 $btn-font-size-sm: 0.8rem;
 $btn-font-weight-sm: 500;
 $btn-line-height-sm: normal;
+
+//-- Buttons groups
+$btn-group-horizontal-space: 1rem;
+$btn-group-vertical-space: 1rem;
+$input-group-horizontal-space: 1rem;
+$input-group-vertical-space: 1rem;
 
 // -- Inputs
 $input-font-size: 1rem;

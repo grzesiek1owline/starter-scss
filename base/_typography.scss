@@ -1,20 +1,4 @@
-/**
- * Typography
- * =================================
- * - Base
- * - Paragraphs
- * - Headings
- * - Type sizes
- * - Misc
- * - Utilities
- *
- * Body font size, leadings etc have been set in _variables.scss
- *
- * See http://modularscale.com for
- *
- */
-
- html {
+html {
   box-sizing: border-box;
   font-size: 100%;
   line-height: $html-line-height;
